@@ -1,9 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+html {
+    font-size: 16px;
+}
+
+#root {
+    height: 100vh;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#root {
-    height: 100vh;
+/* temp */
+.goldenText {
+    font-size: 3rem; /* 48px */
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(#b9b18e 50%, #7e7961 50%);
 }
