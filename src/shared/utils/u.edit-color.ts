@@ -1,4 +1,4 @@
-const editColor = (color: string, value: number) => {
+const uEditColor = (color: string, value: number) => {
     const rgbaRegex = /^rgb(a?)\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d*\.?\d+))?\)$/;
     const rgbaMatch = color.match(rgbaRegex);
     if (rgbaMatch) {
@@ -34,4 +34,4 @@ const editColor = (color: string, value: number) => {
 
     return color;
 };
-export default editColor;
+export default uEditColor;

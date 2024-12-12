@@ -1,4 +1,4 @@
-export enum EPalette {
+export enum ePalette {
     black = "#000000",
     background1 = "#3a5b3c",
     background2 = "#363a36",
