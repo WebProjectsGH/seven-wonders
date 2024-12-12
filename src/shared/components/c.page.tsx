@@ -1,4 +1,5 @@
 import React, { FC, ReactNode, CSSProperties } from "react";
+import { EPalette } from "../enums/e.palette";
 
 type TVariants = "default" | "centered";
 
@@ -21,7 +22,7 @@ export default CPage;
 // Variants...
 const SxPage: CSSProperties = {
     height: "100%",
-    background: `radial-gradient(100% 215.42% at 0% 0%, #3a5b3c 0%, #363a36 100%)`,
+    background: `radial-gradient(100% 215.42% at 0% 0%, ${EPalette.background1} 0%, ${EPalette.background2} 100%)`,
 };
 
 // default

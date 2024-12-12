@@ -13,11 +13,3 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-
-/* temp */
-.goldenText {
-    font-size: 3rem; /* 48px */
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(#b9b18e 50%, #7e7961 50%);
-}
