@@ -10,14 +10,14 @@ interface iProps {
 }
 
 const variants: { [key in tVariants]: FC<iProps> } = {
-    default: (props: iProps) => <CDefaultPage {...props}></CDefaultPage>,
-    centered: (props: iProps) => <CCenteredPage {...props}></CCenteredPage>,
+    default: (props: iProps) => <DefaultPage {...props}></DefaultPage>,
+    centered: (props: iProps) => <CenteredPage {...props}></CenteredPage>,
 };
 
-const CPage: FC<iProps> = (props) => {
+const Page: FC<iProps> = (props) => {
     return variants[props.variant || "centered"](props);
 };
-export default CPage;
+export default Page;
 
 // Variants...
 const sPage: CSSProperties = {
@@ -27,8 +27,7 @@ const sPage: CSSProperties = {
 
 // default
 const sDefaultPage: CSSProperties = { ...sPage };
-const CDefaultPage: FC<iProps> = ({ children }) => <main style={sDefaultPage}>{children}</main>;
-
+const DefaultPage: FC<iProps> = ({ children }) => <main style={sDefaultPage}>{children}</main>;
 // centered
 const sCenteredPage: CSSProperties = {
     ...sPage,
@@ -36,4 +35,4 @@ const sCenteredPage: CSSProperties = {
     flexDirection: "column",
     alignItems: "center",
 };
-const CCenteredPage: FC<iProps> = ({ children }) => <main style={sCenteredPage}>{children}</main>;
+const CenteredPage: FC<iProps> = ({ children }) => <main style={sCenteredPage}>{children}</main>;

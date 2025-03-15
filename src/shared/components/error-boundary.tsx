@@ -8,7 +8,7 @@ interface iState {
     hasError: boolean;
 }
 
-class CErrorBoundary extends Component<iProps, iState> {
+class ErrorBoundary extends Component<iProps, iState> {
     constructor(props: iProps) {
         super(props);
         this.state = { hasError: false };
@@ -28,4 +28,4 @@ class CErrorBoundary extends Component<iProps, iState> {
     }
 }
 
-export default CErrorBoundary;
+export default ErrorBoundary;

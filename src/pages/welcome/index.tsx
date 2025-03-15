@@ -1,17 +1,17 @@
 import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
-import CPage from "../../shared/components/c.page";
-import CTypography from "../../shared/components/c.typography";
+import Page from "../../shared/components/page";
+import Typography from "../../shared/components/typography";
 import uMakeMetalText from "../../shared/utils/u.make-metal-text";
 import { ePalette } from "../../shared/enums/e.palette";
 
-const CWelcomePage: FC = () => {
+const WelcomePage: FC = () => {
     return (
-        <CPage variant="centered">
-            <CTypography variant="h1" style={uMakeMetalText(ePalette.gold)}>
+        <Page variant="centered">
+            <Typography variant="h1" style={uMakeMetalText(ePalette.gold)}>
                 Welcome Page
-            </CTypography>
-        </CPage>
+            </Typography>
+        </Page>
     );
 };
-export default observer(CWelcomePage);
+export default observer(WelcomePage);

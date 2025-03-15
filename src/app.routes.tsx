@@ -1,17 +1,17 @@
 import React, { FC, lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import CSuspenseWrapper from "./shared/components/c.suspense-wrapper";
+import SuspenseWrapper from "./shared/components/suspense-wrapper";
 
 // ===== PAGES =====
-import CWelcomePage from "./pages/welcome";
+import WelcomePage from "./pages/welcome";
 // ===== LAZY PAGES =====
 const LazyPage = lazy(() => import("./pages/lazy"));
 
 const AppRoutes: FC = () => {
     return (
         <Routes>
-            <Route path="/" element={<CWelcomePage />} />
-            <Route path="/create-game" element={<CSuspenseWrapper element={LazyPage} />} />
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/create-game" element={<SuspenseWrapper element={LazyPage} />} />
 
             {/*DEFAULT*/}
             <Route path="*" element={<Navigate to="/" />} />
