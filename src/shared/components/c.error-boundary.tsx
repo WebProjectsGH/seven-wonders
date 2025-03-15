@@ -1,15 +1,15 @@
 import React, { ReactNode, Component, ErrorInfo } from "react";
 
-interface IProps {
+interface iProps {
     children?: ReactNode;
 }
 
-interface IState {
+interface iState {
     hasError: boolean;
 }
 
-class CErrorBoundary extends Component<IProps, IState> {
-    constructor(props: IProps) {
+class CErrorBoundary extends Component<iProps, iState> {
+    constructor(props: iProps) {
         super(props);
         this.state = { hasError: false };
     }
